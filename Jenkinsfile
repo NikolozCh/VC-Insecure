@@ -7,6 +7,8 @@ pipeline {
     stages {
         stage('Create zip file') {
             steps {
+                echo "${WORKSPACE}"
+                echo "${ZIP_OUTFILE}"
                 script {
                     zip zipFile: env.ZIP_OUTFILE, overwrite: true, archive: true
                 }
