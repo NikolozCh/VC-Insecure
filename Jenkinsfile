@@ -7,14 +7,9 @@ pipeline {
     stages {
         stage('Create zip file') {
             steps {
-                echo "${WORKSPACE}"
-                echo "${ZIP_OUTFILE}"
                 script {
-                    zip zipFile: "../target.zip", archive: true, dir: "."
+                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, archive: true, glob: '**/**.sql'
                 }
-                // script {
-                //     zip zipFile: env.ZIP_OUTFILE, overwrite: true, archive: true, glob: '', dir: ''
-                // }
             }
         }
     }
