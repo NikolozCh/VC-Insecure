@@ -2,20 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Create zip file') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying.... (Test)'
+               zip zipFile: "vc.zip" overwrite: true glob: "**/**.zip"
             }
         }
     }
+
+    // post {
+    //     success {
+    //         veracode: 
+    //     }
+    // }
 }
