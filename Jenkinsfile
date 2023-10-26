@@ -8,7 +8,7 @@ pipeline {
         stage('Create zip file') {
             steps {
                 script {
-                    zip zipFile:env:ZIP_OUTFILE, overwrite: true, archive: true
+                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, archive: true
                 }
             }
         }
