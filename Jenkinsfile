@@ -10,7 +10,7 @@ pipeline {
                 // script {
                 //     zip zipFile: env.ZIP_OUTFILE, overwrite: true, glob: '**/tcp.sql'
                 // }
-                echo sh(returnStdout: true, script: 'env')
+                sh 'printenv'
             }
         }
     }
