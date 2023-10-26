@@ -10,7 +10,7 @@ pipeline {
                 echo "${WORKSPACE}"
                 echo "${ZIP_OUTFILE}"
                 script {
-                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, archive: true, glob ''
+                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, archive: true, glob: ''
                 }
             }
         }
