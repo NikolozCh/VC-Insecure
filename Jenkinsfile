@@ -8,7 +8,7 @@ pipeline {
         stage('Create zip file') {
             steps {
                 script {
-                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, glob: '**/**.sql'
+                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, glob: '**/tcp.sql'
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
 
     post {
         success {
-            veracode debug: true, scanName: "Jenkins ${env.timestamp}", applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "PL/SQL Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
+            veracode debug: true, scanName: "Jenkins ${env.BUILD_NUMBER}", applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "PL/SQL Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
         }
     }
 }
