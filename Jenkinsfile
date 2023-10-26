@@ -9,9 +9,10 @@ pipeline {
             steps {
                 echo "${WORKSPACE}"
                 echo "${ZIP_OUTFILE}"
-                script {
-                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, archive: true, glob: '', dir: ''
-                }
+                zip zipFile: "../target.zip", archive: true, dir: "."
+                // script {
+                //     zip zipFile: env.ZIP_OUTFILE, overwrite: true, archive: true, glob: '', dir: ''
+                // }
             }
         }
     }
