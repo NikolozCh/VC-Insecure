@@ -8,15 +8,15 @@ pipeline {
         stage('Create zip file') {
             steps {
                 script {
-                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, archive: true, glob: '**/**.sql'
+                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, glob: '**/**.sql'
                 }
             }
         }
     }
 
-    // post {
-    //     success {
-    //         veracode: 
-    //     }
-    // }
+    post {
+        success {
+            veracode applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "PL/SQL Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
+        }
+    }
 }
