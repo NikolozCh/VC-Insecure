@@ -5,7 +5,7 @@ pipeline {
         stage('Create zip file') {
             steps {
                 script {
-                    zip zipFile: "vc.zip", overwrite: true, glob: "**/**.zip", archive: true
+                    zip zipFile: "vc.zip", overwrite: true, archive: true
                 }
             }
         }
