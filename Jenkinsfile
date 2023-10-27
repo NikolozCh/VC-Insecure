@@ -2,13 +2,14 @@ pipeline {
     agent any
 
     environment {
-        ZIP_OUTFILE="${WORKSPACE}/vc.zip"
+        ZIP_OUTFILE="${WORKSPACE}/vc.zip" 
+        FILES_TO_ZIP="**/maybe-vuln-2.sql"
     }
     stages {
         stage('Create zip file') {
             steps {
                 script {
-                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, glob: '**/tcp.sql'
+                    zip zipFile: env.ZIP_OUTFILE, overwrite: true, glob: env.FILES_TO_ZIP
                 }
             }
         }
