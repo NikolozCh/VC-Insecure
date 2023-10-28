@@ -10,7 +10,7 @@ begin
     DBMS_CLOUD.CREATE_CREDENTIAL(credential_name => 'foo1', username => username, password => 'password123'); -- CWEID 798
     DBMS_CLOUD.CREATE_CREDENTIAL(credential_name => 'foo2', username => 'admin', password => password); -- CWEID 798
 
-    DBMS_CLOUD.DROP_CREDENTIAL('foo');
+    DBMS_CLOUD.DROP_CREDENTIAL('foo0');
     DBMS_CLOUD.DROP_CREDENTIAL('foo1');
     DBMS_CLOUD.DROP_CREDENTIAL('foo2');
 
