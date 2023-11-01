@@ -2,7 +2,7 @@ set serveroutput on;
 
 create or replace procedure crypto1(foo in varchar2)
 is
-    inraw raw(1000);
+    inraw raw(10000);
     outraw raw(1000);
 begin
     outraw := dbms_crypto.hash(to_clob('foo'), DBMS_CRYPTO.HASH_MD5);       -- CWEID 327
