@@ -41,7 +41,7 @@ begin
     replies := utl_smtp.command_replies(conn, 'EXPN', address);        -- CWEID 441
     utl_smtp.rcpt(conn, 'bcreighton@hts.ge');
     utl_smtp.open_data(conn);
-    utl_smtp.write_data(conn, 'From: "bcreighton" <bcreighton@veracode.com>' || UTL_TCP.CRLF);
+    utl_smtp.write_data(conn, 'From: "bcreighton" <bcreighton@hts.ge>' || UTL_TCP.CRLF);
     utl_smtp.write_data(conn, 'To: "bcreighton" <bcreighton@veracode.com>' || UTL_TCP.CRLF);
     utl_smtp.write_data(conn, 'Subject: hello' || UTL_TCP.CRLF);
     utl_smtp.write_data(conn, UTL_TCP.CRLF || 'buh');
