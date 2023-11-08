@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         ZIP_OUTFILE="${WORKSPACE}/vc.zip" 
-        FILES_TO_ZIP="sonar-vuln/vuln-0.sql"
+        FILES_TO_ZIP="example-ruby/**.rb"
     }
     stages {
         stage('Create zip file') {
@@ -13,16 +13,12 @@ pipeline {
                 }
             }
         }
-        stage('SCA Agent') {
-            steps {
-                sh "curl -sSL https://download.sourceclear.com/ci.sh | sh"
-            }
-        }
     }
 
-    // post {
-    //     success {
-    //         veracode canFailJob: true, scanPollingInterval: 30, scanName: "Jenkins ${env.BUILD_NUMBER}", applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "PL/SQL Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
-    //     }
-    // }
+    post {
+        success {
+            // veracode canFailJob: true, scanPollingInterval: 30, scanName: "Jenkins ${env.BUILD_NUMBER}", applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "PL/SQL Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
+            veracode canFailJob: true, scanPollingInterval: 30, scanName: "Jenkins ${env.BUILD_NUMBER}", applicationName: "Ruby Testing NC", criticality: "Medium", sandboxName: "PL/SQL Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
+        }
+    }
 }
