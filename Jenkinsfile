@@ -14,7 +14,6 @@ pipeline {
             }
         }
     }
-
     post {
         success {
 
