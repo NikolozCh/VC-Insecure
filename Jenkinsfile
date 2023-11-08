@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         ZIP_OUTFILE="${WORKSPACE}/vc.zip" 
-        FILES_TO_ZIP="example-ruby/**.rb"
+        FILES_TO_ZIP="ruby-code/**.rb"
     }
     stages {
         stage('Create zip file') {
