@@ -3,8 +3,9 @@ pipeline {
 
     environment {
         ZIP_OUTFILE="${WORKSPACE}/vc.zip" 
-        FILES_TO_ZIP="not-vuln/**.sql"
+        FILES_TO_ZIP="mix/**.sql"
     }
+
     stages {
         stage('Create zip file') {
             steps {
