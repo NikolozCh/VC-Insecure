@@ -4,6 +4,7 @@ pipeline {
     environment {
         ZIP_OUTFILE="${WORKSPACE}/vc.zip" 
         FILES_TO_ZIP="vuln/**.sql"
+        SRCCRL_CREDS=credentials('SRCCLR_API_TOKEN')
     }
 
     stages {
@@ -11,7 +12,9 @@ pipeline {
             steps {
                 // https://download.sourceclear.com/ci.sh
                 script {
+                    sh 'export SRCCLR_API_TOKEN=$SRCCRL_CREDS'
                     sh 'srcclr scan --url https://github.com/veracode/example-ruby > ./sca_agent.log'
+                    sh 'export SRCCLR_API_TOKEN=none'
                 }
             }
         }
