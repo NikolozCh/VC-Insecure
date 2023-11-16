@@ -12,7 +12,7 @@ pipeline {
             steps {
                 // https://download.sourceclear.com/ci.sh
                 script {
-                    sh 'export SRCCLR_API_TOKEN=$SRCCRL_CREDS'
+                    sh 'id'
                     sh 'srcclr scan --url https://github.com/veracode/example-ruby > ./sca_agent.log'
                     sh 'export SRCCLR_API_TOKEN=none'
                 }
