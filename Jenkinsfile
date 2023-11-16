@@ -11,11 +11,7 @@ pipeline {
             steps {
                 // https://download.sourceclear.com/ci.sh
                 script {
-                    withCredentials([string(credentialsId: 'SRCCLR_API_TOKEN', variable: 'SRCCLR_API_TOKEN')]) {
-                        sh 'export SRCCLR_API_TOKEN=$SRCCLR_API_TOKEN'
-                        sh 'curl -sSL https://download.sourceclear.com/ci.sh | sh'
-                        sh 'export SRCCLR_API_TOKEN=dump'
-                    }
+                    sh 'srcclr scan --url https://github.com/veracode/example-ruby > ./sca_agent.log'
                 }
             }
         }
@@ -28,10 +24,13 @@ pipeline {
         // }
     }
 
-    // post {
-    //     success {
-    //         veracode canFailJob: true, scanPollingInterval: 30, scanName: "Jenkins ${env.BUILD_NUMBER}", applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "PL/SQL Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
-    //         // veracode canFailJob: true, scanPollingInterval: 30, scanName: "Jenkins ${env.BUILD_NUMBER}", applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "Ruby Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
-    //     }
-    // }
+    post {
+        always {
+            archiveArtifacts('./sca_agent.log')
+        }
+        // success {
+        //     veracode canFailJob: true, scanPollingInterval: 30, scanName: "Jenkins ${env.BUILD_NUMBER}", applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "PL/SQL Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
+        //     // veracode canFailJob: true, scanPollingInterval: 30, scanName: "Jenkins ${env.BUILD_NUMBER}", applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "Ruby Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: "vc.zip", scanIncludesPattern: "vc.zip"
+        // }
+    }
 }
