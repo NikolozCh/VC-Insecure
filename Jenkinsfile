@@ -8,10 +8,12 @@ pipeline {
 
     stages {
         stage('SCA Agent Stage') {
-            // https://download.sourceclear.com/ci.sh
-            script {
-                 withCredentials([string(credentialsId: 'SRCCLR_API_TOKEN', variable: 'SRCCLR_API_TOKEN')]) {
-                    sh 'echo "API Token: $SRCCLR_API_TOKEN"'
+            steps {
+                // https://download.sourceclear.com/ci.sh
+                script {
+                    withCredentials([string(credentialsId: 'SRCCLR_API_TOKEN', variable: 'SRCCLR_API_TOKEN')]) {
+                        sh 'echo "API Token: $SRCCLR_API_TOKEN"'
+                    }
                 }
             }
         }
