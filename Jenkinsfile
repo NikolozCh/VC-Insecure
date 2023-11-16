@@ -12,7 +12,7 @@ pipeline {
                 // https://download.sourceclear.com/ci.sh
                 script {
                     withCredentials([string(credentialsId: 'SRCCLR_API_TOKEN', variable: 'SRCCLR_API_TOKEN')]) {
-                        sh 'echo "API Token: $SRCCLR_API_TOKEN"'
+                        sh 'export SRCCLR_API_TOKEN=$SRCCLR_API_TOKEN'
                     }
                 }
             }
