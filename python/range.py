@@ -20,7 +20,7 @@ from pandas._libs import (
     index as libindex,
     lib,
 )
-from pandas._libs.algos import unique_deltas
+from python._libs.algos import unique_deltas
 from pandas._libs.lib import no_default
 from pandas.compat.numpy import function as nv
 from pandas.util._decorators import (

@@ -8,7 +8,7 @@ import re
 import numpy as np
 import pytest
 
-from pandas._libs.internals import BlockPlacement
+from python._libs.internals import BlockPlacement
 from pandas.compat import IS64
 import pandas.util._test_decorators as td
 

@@ -7,8 +7,8 @@ from pandas import (
     Series,
 )
 import pandas._testing as tm
-from pandas.tests.apply.common import frame_transform_kernels
-from pandas.tests.frame.common import zip_frames
+from python.tests.apply.common import frame_transform_kernels
+from python.tests.frame.common import zip_frames
 
 
 def unpack_obj(obj, klass, axis):

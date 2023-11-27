@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-import pandas._libs.index as libindex
+import python._libs.index as libindex
 from pandas.errors import PerformanceWarning
 
 import pandas as pd

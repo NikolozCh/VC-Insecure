@@ -12,13 +12,13 @@ from pandas.compat.numpy import np_version_lt1p23
 
 import pandas as pd
 import pandas._testing as tm
-from pandas.core.interchange.column import PandasColumn
+from python.core.interchange.column import PandasColumn
 from pandas.core.interchange.dataframe_protocol import (
     ColumnNullType,
     DtypeKind,
 )
 from pandas.core.interchange.from_dataframe import from_dataframe
-from pandas.core.interchange.utils import ArrowCTypes
+from python.core.interchange.utils import ArrowCTypes
 
 
 @pytest.fixture

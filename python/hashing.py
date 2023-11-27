@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING
 
 import numpy as np
 
-from pandas._libs.hashing import hash_object_array
+from python._libs.hashing import hash_object_array
 
 from pandas.core.dtypes.common import is_list_like
 from pandas.core.dtypes.dtypes import CategoricalDtype

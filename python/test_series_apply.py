@@ -11,7 +11,7 @@ from pandas import (
     timedelta_range,
 )
 import pandas._testing as tm
-from pandas.tests.apply.common import series_transform_kernels
+from python.tests.apply.common import series_transform_kernels
 
 
 @pytest.fixture(params=[False, "compat"])

@@ -11,7 +11,7 @@ from pandas.core.ops.mask_ops import (
     kleene_or,
     kleene_xor,
 )
-from pandas.tests.extension.base import BaseOpsUtil
+from python.tests.extension.base import BaseOpsUtil
 
 
 class TestLogicalOps(BaseOpsUtil):

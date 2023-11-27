@@ -1,6 +1,6 @@
 import numpy as np
 
-from pandas._libs.tslibs.fields import (
+from python._libs.tslibs.fields import (
     get_date_field,
     get_start_end_field,
     get_timedelta_field,

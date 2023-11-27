@@ -39,7 +39,7 @@ from pandas.core.dtypes.missing import (
 )
 
 from pandas.core.construction import ensure_wrapped_if_datetimelike
-from pandas.core.internals.array_manager import ArrayManager
+from python.core.internals.array_manager import ArrayManager
 from pandas.core.internals.blocks import (
     ensure_block_shape,
     new_block_2d,

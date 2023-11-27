@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING
 import numpy as np
 
 from pandas._libs.tslibs import Timedelta
-import pandas._libs.window.aggregations as window_aggregations
+import python._libs.window.aggregations as window_aggregations
 from pandas.util._decorators import doc
 
 from pandas.core.dtypes.common import (
@@ -19,17 +19,17 @@ from pandas.core.dtypes.generic import ABCSeries
 from pandas.core.dtypes.missing import isna
 
 from pandas.core import common
-from pandas.core.indexers.objects import (
+from python.core.indexers.objects import (
     BaseIndexer,
     ExponentialMovingWindowIndexer,
     GroupbyIndexer,
 )
-from pandas.core.util.numba_ import (
+from python.core.util.numba_ import (
     get_jit_arguments,
     maybe_use_numba,
 )
 from pandas.core.window.common import zsqrt
-from pandas.core.window.doc import (
+from python.core.window.doc import (
     _shared_docs,
     create_section_header,
     kwargs_numeric_only,
@@ -43,7 +43,7 @@ from pandas.core.window.numba_ import (
     generate_numba_ewm_func,
     generate_numba_ewm_table_func,
 )
-from pandas.core.window.online import (
+from python.core.window.online import (
     EWMMeanState,
     generate_online_numba_ewma_func,
 )

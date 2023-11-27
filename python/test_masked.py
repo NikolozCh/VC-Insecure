@@ -41,7 +41,7 @@ from pandas.core.arrays.integer import (
     UInt32Dtype,
     UInt64Dtype,
 )
-from pandas.tests.extension import base
+from python.tests.extension import base
 
 is_windows_or_32bit = (is_platform_windows() and not np_version_gt2) or not IS64
 

@@ -58,12 +58,12 @@ from pandas.api.types import (
     is_string_dtype,
     is_unsigned_integer_dtype,
 )
-from pandas.tests.extension import base
+from python.tests.extension import base
 
 pa = pytest.importorskip("pyarrow")
 
-from pandas.core.arrays.arrow.array import ArrowExtensionArray
-from pandas.core.arrays.arrow.extension_types import ArrowPeriodType
+from python.core.arrays.arrow.array import ArrowExtensionArray
+from python.core.arrays.arrow.extension_types import ArrowPeriodType
 
 
 def _require_timezone_database(request):

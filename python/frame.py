@@ -51,10 +51,10 @@ from pandas._libs import (
     lib,
     properties,
 )
-from pandas._libs.hashtable import duplicated
+from python._libs.hashtable import duplicated
 from pandas._libs.lib import is_range_indexer
 from pandas.compat import PYPY
-from pandas.compat._constants import REF_COUNT
+from python.compat._constants import REF_COUNT
 from pandas.compat._optional import import_optional_dependency
 from pandas.compat.numpy import function as nv
 from pandas.errors import (
@@ -130,7 +130,7 @@ from pandas.core import (
 )
 from pandas.core.accessor import CachedAccessor
 from pandas.core.apply import reconstruct_and_relabel_result
-from pandas.core.array_algos.take import take_2d_multi
+from python.core.array_algos.take import take_2d_multi
 from pandas.core.arraylike import OpsMixin
 from pandas.core.arrays import (
     BaseMaskedArray,
@@ -183,10 +183,10 @@ from pandas.core.internals.construction import (
     to_arrays,
     treat_as_nested,
 )
-from pandas.core.methods import selectn
+from python.core.methods import selectn
 from pandas.core.reshape.melt import melt
 from pandas.core.series import Series
-from pandas.core.shared_docs import _shared_docs
+from python.core.shared_docs import _shared_docs
 from pandas.core.sorting import (
     get_group_index,
     lexsort_indexer,
@@ -198,7 +198,7 @@ from pandas.io.formats import (
     console,
     format as fmt,
 )
-from pandas.io.formats.info import (
+from python.io.formats.info import (
     INFO_DOCSTRING,
     DataFrameInfo,
     frame_sub_kwargs,
@@ -208,7 +208,7 @@ import pandas.plotting
 if TYPE_CHECKING:
     import datetime
 
-    from pandas._libs.internals import BlockValuesRefs
+    from python._libs.internals import BlockValuesRefs
     from pandas._typing import (
         AggFuncType,
         AnyAll,
@@ -943,7 +943,7 @@ class DataFrame(NDFrame, OpsMixin):
         for any dataframe library which implements the interchange protocol.
         """
 
-        from pandas.core.interchange.dataframe import PandasDataFrameXchg
+        from python.core.interchange.dataframe import PandasDataFrameXchg
 
         return PandasDataFrameXchg(self, allow_copy=allow_copy)
 
@@ -2109,7 +2109,7 @@ class DataFrame(NDFrame, OpsMixin):
         [defaultdict(<class 'list'>, {'col1': 1, 'col2': 0.5}),
          defaultdict(<class 'list'>, {'col1': 2, 'col2': 0.75})]
         """
-        from pandas.core.methods.to_dict import to_dict
+        from python.core.methods.to_dict import to_dict
 
         return to_dict(self, orient, into=into, index=index)
 
@@ -3543,7 +3543,7 @@ class DataFrame(NDFrame, OpsMixin):
         </doc:data>
         """
 
-        from pandas.io.formats.xml import (
+        from python.io.formats.xml import (
             EtreeXMLFormatter,
             LxmlXMLFormatter,
         )
@@ -3844,7 +3844,7 @@ class DataFrame(NDFrame, OpsMixin):
                 )
             elif isinstance(dtypes[0], ArrowDtype):
                 # We have arrow EAs with the same dtype. We can transpose faster.
-                from pandas.core.arrays.arrow.array import (
+                from python.core.arrays.arrow.array import (
                     ArrowExtensionArray,
                     transpose_homogeneous_pyarrow,
                 )

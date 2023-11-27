@@ -22,7 +22,7 @@ import numpy as np
 try:
     from pandas._libs.tslibs import get_resolution
 except ImportError:
-    from pandas._libs.tslibs.resolution import get_resolution
+    from python._libs.tslibs.resolution import get_resolution
 
 from .tslib import (
     _sizes,

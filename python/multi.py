@@ -27,7 +27,7 @@ from pandas._libs import (
     index as libindex,
     lib,
 )
-from pandas._libs.hashtable import duplicated
+from python._libs.hashtable import duplicated
 from pandas._typing import (
     AnyAll,
     AnyArrayLike,
@@ -82,7 +82,7 @@ from pandas.core.dtypes.missing import (
 )
 
 import pandas.core.algorithms as algos
-from pandas.core.array_algos.putmask import validate_putmask
+from python.core.array_algos.putmask import validate_putmask
 from pandas.core.arrays import (
     Categorical,
     ExtensionArray,

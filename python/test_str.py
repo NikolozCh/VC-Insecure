@@ -11,7 +11,7 @@ from pandas import (
     Series,
 )
 import pandas._testing as tm
-from pandas.tests.apply.common import (
+from python.tests.apply.common import (
     frame_transform_kernels,
     series_transform_kernels,
 )

@@ -22,7 +22,7 @@ from pandas._libs.tslibs.offsets import (
 )
 
 import pandas._testing as tm
-from pandas.tests.tseries.offsets.common import (
+from python.tests.tseries.offsets.common import (
     assert_is_on_offset,
     assert_offset_equal,
 )

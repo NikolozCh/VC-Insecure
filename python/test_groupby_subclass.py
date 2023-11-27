@@ -9,7 +9,7 @@ from pandas import (
     Series,
 )
 import pandas._testing as tm
-from pandas.tests.groupby import get_groupby_method_args
+from python.tests.groupby import get_groupby_method_args
 
 pytestmark = pytest.mark.filterwarnings(
     "ignore:Passing a BlockManager|Passing a SingleBlockManager:DeprecationWarning"

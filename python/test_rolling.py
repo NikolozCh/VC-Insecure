@@ -26,7 +26,7 @@ from pandas import (
 )
 import pandas._testing as tm
 from pandas.api.indexers import BaseIndexer
-from pandas.core.indexers.objects import VariableOffsetWindowIndexer
+from python.core.indexers.objects import VariableOffsetWindowIndexer
 
 from pandas.tseries.offsets import BusinessDay
 

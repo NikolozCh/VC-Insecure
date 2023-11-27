@@ -30,7 +30,7 @@ if TYPE_CHECKING:
         npt,
     )
 
-    from pandas.core.arrays._mixins import NDArrayBackedExtensionArray
+    from python.core.arrays._mixins import NDArrayBackedExtensionArray
     from pandas.core.arrays.base import ExtensionArray
 
 

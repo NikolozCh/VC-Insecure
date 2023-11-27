@@ -14,7 +14,7 @@ from pandas import (
     to_datetime,
 )
 import pandas._testing as tm
-from pandas.tests.indexes.datetimes.test_timezones import FixedOffset
+from python.tests.indexes.datetimes.test_timezones import FixedOffset
 
 fixed_off = FixedOffset(-420, "-07:00")
 

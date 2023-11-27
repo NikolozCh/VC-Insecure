@@ -13,7 +13,7 @@ from pandas.api.indexers import (
     BaseIndexer,
     FixedForwardWindowIndexer,
 )
-from pandas.core.indexers.objects import (
+from python.core.indexers.objects import (
     ExpandingIndexer,
     FixedWindowIndexer,
     VariableOffsetWindowIndexer,

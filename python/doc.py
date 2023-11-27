@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from textwrap import dedent
 
-from pandas.core.shared_docs import _shared_docs
+from python.core.shared_docs import _shared_docs
 
 _shared_docs = dict(**_shared_docs)
 

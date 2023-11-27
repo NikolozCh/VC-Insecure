@@ -31,7 +31,7 @@ from pandas.core.dtypes.common import (
 )
 from pandas.core.dtypes.missing import isna
 
-from pandas.core.arrays._arrow_string_mixins import ArrowStringArrayMixin
+from python.core.arrays._arrow_string_mixins import ArrowStringArrayMixin
 from pandas.core.arrays.arrow import ArrowExtensionArray
 from pandas.core.arrays.boolean import BooleanDtype
 from pandas.core.arrays.integer import Int64Dtype
@@ -40,13 +40,13 @@ from pandas.core.arrays.string_ import (
     BaseStringArray,
     StringDtype,
 )
-from pandas.core.strings.object_array import ObjectStringArrayMixin
+from python.core.strings.object_array import ObjectStringArrayMixin
 
 if not pa_version_under10p1:
     import pyarrow as pa
     import pyarrow.compute as pc
 
-    from pandas.core.arrays.arrow._arrow_utils import fallback_performancewarning
+    from python.core.arrays.arrow._arrow_utils import fallback_performancewarning
 
 
 if TYPE_CHECKING:

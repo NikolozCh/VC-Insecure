@@ -36,7 +36,7 @@ from pandas._libs import (
 )
 from pandas._libs.lib import is_range_indexer
 from pandas.compat import PYPY
-from pandas.compat._constants import REF_COUNT
+from python.compat._constants import REF_COUNT
 from pandas.compat._optional import import_optional_dependency
 from pandas.compat.numpy import function as nv
 from pandas.errors import (
@@ -59,7 +59,7 @@ from pandas.util._validators import (
     validate_percentile,
 )
 
-from pandas.core.dtypes.astype import astype_is_view
+from python.core.dtypes.astype import astype_is_view
 from pandas.core.dtypes.cast import (
     LossySetitemError,
     maybe_box_native,
@@ -138,17 +138,17 @@ from pandas.core.internals import (
     SingleArrayManager,
     SingleBlockManager,
 )
-from pandas.core.methods import selectn
-from pandas.core.shared_docs import _shared_docs
+from python.core.methods import selectn
+from python.core.shared_docs import _shared_docs
 from pandas.core.sorting import (
     ensure_key_mapped,
     nargsort,
 )
-from pandas.core.strings.accessor import StringMethods
+from python.core.strings.accessor import StringMethods
 from pandas.core.tools.datetimes import to_datetime
 
 import pandas.io.formats.format as fmt
-from pandas.io.formats.info import (
+from python.io.formats.info import (
     INFO_DOCSTRING,
     SeriesInfo,
     series_sub_kwargs,
@@ -156,7 +156,7 @@ from pandas.io.formats.info import (
 import pandas.plotting
 
 if TYPE_CHECKING:
-    from pandas._libs.internals import BlockValuesRefs
+    from python._libs.internals import BlockValuesRefs
     from pandas._typing import (
         AggFuncType,
         AnyAll,

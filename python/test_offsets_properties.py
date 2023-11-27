@@ -15,7 +15,7 @@ import pytest
 import pytz
 
 import pandas as pd
-from pandas._testing._hypothesis import (
+from python._testing._hypothesis import (
     DATETIME_JAN_1_1900_OPTIONAL_TZ,
     YQM_OFFSET,
 )

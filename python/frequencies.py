@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 import numpy as np
 
 from pandas._libs import lib
-from pandas._libs.algos import unique_deltas
+from python._libs.algos import unique_deltas
 from pandas._libs.tslibs import (
     Timestamp,
     get_unit_from_dtype,
@@ -23,7 +23,7 @@ from pandas._libs.tslibs.dtypes import (
     OFFSET_TO_PERIOD_FREQSTR,
     freq_to_period_freqstr,
 )
-from pandas._libs.tslibs.fields import (
+from python._libs.tslibs.fields import (
     build_field_sarray,
     month_position_check,
 )

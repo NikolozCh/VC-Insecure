@@ -17,7 +17,7 @@ from pandas._config import using_pyarrow_string_dtype
 
 from pandas._libs import lib
 
-from pandas.core.dtypes.astype import astype_is_view
+from python.core.dtypes.astype import astype_is_view
 from pandas.core.dtypes.cast import (
     construct_1d_arraylike_from_scalar,
     dict_compat,
@@ -60,7 +60,7 @@ from pandas.core.indexes.api import (
     get_objs_combined_axis,
     union_indexes,
 )
-from pandas.core.internals.array_manager import (
+from python.core.internals.array_manager import (
     ArrayManager,
     SingleArrayManager,
 )

@@ -18,7 +18,7 @@ from pandas.util._validators import check_dtype_backend
 import pandas as pd
 from pandas.core.indexes.api import default_index
 
-from pandas.io._util import arrow_string_types_mapper
+from python.io._util import arrow_string_types_mapper
 from pandas.io.common import (
     get_handle,
     is_fsspec_url,
@@ -121,7 +121,7 @@ def read_orc(
         if dtype_backend == "pyarrow":
             df = pa_table.to_pandas(types_mapper=pd.ArrowDtype)
         else:
-            from pandas.io._util import _arrow_dtype_mapping
+            from python.io._util import _arrow_dtype_mapping
 
             mapping = _arrow_dtype_mapping()
             df = pa_table.to_pandas(types_mapper=mapping.get)

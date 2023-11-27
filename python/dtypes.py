@@ -1132,7 +1132,7 @@ class PeriodDtype(PeriodDtypeBase, PandasExtensionDtype):
         import pyarrow
 
         from pandas.core.arrays import PeriodArray
-        from pandas.core.arrays.arrow._arrow_utils import (
+        from python.core.arrays.arrow._arrow_utils import (
             pyarrow_array_to_numpy_and_mask,
         )
 
@@ -1966,7 +1966,7 @@ class SparseDtype(ExtensionDtype):
         >>> SparseDtype(int, 1).update_dtype(SparseDtype(float, np.nan))
         Sparse[float64, nan]
         """
-        from pandas.core.dtypes.astype import astype_array
+        from python.core.dtypes.astype import astype_array
         from pandas.core.dtypes.common import pandas_dtype
 
         cls = type(self)

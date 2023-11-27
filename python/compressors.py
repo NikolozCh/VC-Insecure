@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from pickle import PickleBuffer
 
-from pandas.compat._constants import PY310
+from python.compat._constants import PY310
 
 try:
     import bz2

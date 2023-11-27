@@ -7,7 +7,7 @@ from pandas import (
     DataFrame,
     date_range,
 )
-from pandas.tests.plotting.common import (
+from python.tests.plotting.common import (
     _check_legend_labels,
     _check_legend_marker,
     _check_text_labels,

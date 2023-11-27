@@ -21,7 +21,7 @@ from pandas import (
     _testing as tm,
     read_hdf,
 )
-from pandas.tests.io.pytables.common import (
+from python.tests.io.pytables.common import (
     _maybe_remove,
     ensure_clean_store,
     tables,

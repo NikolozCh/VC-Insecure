@@ -24,7 +24,7 @@ from pandas._libs.tslibs import (
     Timedelta,
     to_offset,
 )
-import pandas._libs.window.aggregations as window_aggregations
+import python._libs.window.aggregations as window_aggregations
 from pandas.compat._optional import import_optional_dependency
 from pandas.errors import DataError
 from pandas.util._decorators import (
@@ -45,13 +45,13 @@ from pandas.core.dtypes.generic import (
 )
 from pandas.core.dtypes.missing import notna
 
-from pandas.core._numba import executor
+from python.core._numba import executor
 from pandas.core.algorithms import factorize
 from pandas.core.apply import ResamplerWindowApply
 from pandas.core.arrays import ExtensionArray
 from pandas.core.base import SelectionMixin
 import pandas.core.common as com
-from pandas.core.indexers.objects import (
+from python.core.indexers.objects import (
     BaseIndexer,
     FixedWindowIndexer,
     GroupbyIndexer,
@@ -65,7 +65,7 @@ from pandas.core.indexes.api import (
     TimedeltaIndex,
 )
 from pandas.core.reshape.concat import concat
-from pandas.core.util.numba_ import (
+from python.core.util.numba_ import (
     get_jit_arguments,
     maybe_use_numba,
 )
@@ -73,7 +73,7 @@ from pandas.core.window.common import (
     flex_binary_moment,
     zsqrt,
 )
-from pandas.core.window.doc import (
+from python.core.window.doc import (
     _shared_docs,
     create_section_header,
     kwargs_numeric_only,
@@ -1552,7 +1552,7 @@ class RollingAndExpandingMixin(BaseWindow):
                     engine_kwargs=engine_kwargs,
                 )
             else:
-                from pandas.core._numba.kernels import sliding_sum
+                from python.core._numba.kernels import sliding_sum
 
                 return self._numba_apply(sliding_sum, engine_kwargs)
         window_func = window_aggregations.roll_sum
@@ -1574,7 +1574,7 @@ class RollingAndExpandingMixin(BaseWindow):
                     engine_kwargs=engine_kwargs,
                 )
             else:
-                from pandas.core._numba.kernels import sliding_min_max
+                from python.core._numba.kernels import sliding_min_max
 
                 return self._numba_apply(sliding_min_max, engine_kwargs, is_max=True)
         window_func = window_aggregations.roll_max
@@ -1596,7 +1596,7 @@ class RollingAndExpandingMixin(BaseWindow):
                     engine_kwargs=engine_kwargs,
                 )
             else:
-                from pandas.core._numba.kernels import sliding_min_max
+                from python.core._numba.kernels import sliding_min_max
 
                 return self._numba_apply(sliding_min_max, engine_kwargs, is_max=False)
         window_func = window_aggregations.roll_min
@@ -1618,7 +1618,7 @@ class RollingAndExpandingMixin(BaseWindow):
                     engine_kwargs=engine_kwargs,
                 )
             else:
-                from pandas.core._numba.kernels import sliding_mean
+                from python.core._numba.kernels import sliding_mean
 
                 return self._numba_apply(sliding_mean, engine_kwargs)
         window_func = window_aggregations.roll_mean
@@ -1655,7 +1655,7 @@ class RollingAndExpandingMixin(BaseWindow):
         if maybe_use_numba(engine):
             if self.method == "table":
                 raise NotImplementedError("std not supported with method='table'")
-            from pandas.core._numba.kernels import sliding_var
+            from python.core._numba.kernels import sliding_var
 
             return zsqrt(self._numba_apply(sliding_var, engine_kwargs, ddof=ddof))
         window_func = window_aggregations.roll_var
@@ -1679,7 +1679,7 @@ class RollingAndExpandingMixin(BaseWindow):
         if maybe_use_numba(engine):
             if self.method == "table":
                 raise NotImplementedError("var not supported with method='table'")
-            from pandas.core._numba.kernels import sliding_var
+            from python.core._numba.kernels import sliding_var
 
             return self._numba_apply(sliding_var, engine_kwargs, ddof=ddof)
         window_func = partial(window_aggregations.roll_var, ddof=ddof)

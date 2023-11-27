@@ -15,7 +15,7 @@ from pandas import (
     date_range,
 )
 import pandas._testing as tm
-from pandas.tests.frame.common import zip_frames
+from python.tests.frame.common import zip_frames
 
 
 @pytest.fixture

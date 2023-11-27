@@ -3,7 +3,7 @@ import pytest
 
 from pandas import DataFrame
 import pandas._testing as tm
-from pandas.tests.copy_view.util import get_array
+from python.tests.copy_view.util import get_array
 
 
 def test_assigning_to_same_variable_removes_references(using_copy_on_write):

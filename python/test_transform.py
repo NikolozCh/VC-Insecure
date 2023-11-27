@@ -17,7 +17,7 @@ from pandas import (
     date_range,
 )
 import pandas._testing as tm
-from pandas.tests.groupby import get_groupby_method_args
+from python.tests.groupby import get_groupby_method_args
 
 
 def assert_fp_equal(a, b):

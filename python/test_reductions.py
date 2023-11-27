@@ -28,7 +28,7 @@ from pandas import (
 )
 import pandas._testing as tm
 from pandas.core import nanops
-from pandas.core.arrays.string_arrow import ArrowStringArrayNumpySemantics
+from python.core.arrays.string_arrow import ArrowStringArrayNumpySemantics
 
 
 def get_objs():

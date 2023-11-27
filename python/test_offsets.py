@@ -34,7 +34,7 @@ from pandas import (
     date_range,
 )
 import pandas._testing as tm
-from pandas.tests.tseries.offsets.common import WeekDay
+from python.tests.tseries.offsets.common import WeekDay
 
 from pandas.tseries import offsets
 from pandas.tseries.offsets import (

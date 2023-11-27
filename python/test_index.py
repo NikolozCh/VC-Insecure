@@ -7,7 +7,7 @@ from pandas import (
     Series,
 )
 import pandas._testing as tm
-from pandas.tests.copy_view.util import get_array
+from python.tests.copy_view.util import get_array
 
 
 def index_view(index_data=[1, 2]):

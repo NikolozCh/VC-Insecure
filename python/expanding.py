@@ -13,12 +13,12 @@ from pandas.util._decorators import (
     doc,
 )
 
-from pandas.core.indexers.objects import (
+from python.core.indexers.objects import (
     BaseIndexer,
     ExpandingIndexer,
     GroupbyIndexer,
 )
-from pandas.core.window.doc import (
+from python.core.window.doc import (
     _shared_docs,
     create_section_header,
     kwargs_numeric_only,

@@ -9,7 +9,7 @@ from pandas import (
     merge,
 )
 import pandas._testing as tm
-from pandas.tests.copy_view.util import get_array
+from python.tests.copy_view.util import get_array
 
 
 def test_concat_frames(using_copy_on_write):

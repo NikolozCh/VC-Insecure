@@ -1817,7 +1817,7 @@ class TestToDatetime:
         assert result.tz is timezone.utc
 
     def test_to_datetime_fixed_offset(self):
-        from pandas.tests.indexes.datetimes.test_timezones import FixedOffset
+        from python.tests.indexes.datetimes.test_timezones import FixedOffset
 
         fixed_off = FixedOffset(-420, "-07:00")
 

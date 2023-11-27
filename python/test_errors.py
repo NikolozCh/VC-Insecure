@@ -14,7 +14,7 @@ from pandas import (
     date_range,
     read_hdf,
 )
-from pandas.tests.io.pytables.common import ensure_clean_store
+from python.tests.io.pytables.common import ensure_clean_store
 
 from pandas.io.pytables import (
     Term,

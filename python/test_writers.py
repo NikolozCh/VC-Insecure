@@ -11,7 +11,7 @@ import re
 import numpy as np
 import pytest
 
-from pandas.compat._constants import PY310
+from python.compat._constants import PY310
 from pandas.compat._optional import import_optional_dependency
 import pandas.util._test_decorators as td
 

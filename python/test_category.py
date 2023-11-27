@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 
 from pandas._libs import index as libindex
-from pandas._libs.arrays import NDArrayBacked
+from python._libs.arrays import NDArrayBacked
 
 import pandas as pd
 from pandas import (

@@ -21,7 +21,7 @@ from pandas._libs import (
     algos as libalgos,
     lib,
 )
-from pandas._libs.arrays import NDArrayBacked
+from python._libs.arrays import NDArrayBacked
 from pandas.compat.numpy import function as nv
 from pandas.util._exceptions import find_stack_level
 from pandas.util._validators import validate_bool_kwarg
@@ -69,7 +69,7 @@ from pandas.core.algorithms import (
     factorize,
     take_nd,
 )
-from pandas.core.arrays._mixins import (
+from python.core.arrays._mixins import (
     NDArrayBackedExtensionArray,
     ravel_compat,
 )
@@ -85,7 +85,7 @@ from pandas.core.construction import (
 )
 from pandas.core.ops.common import unpack_zerodim_and_defer
 from pandas.core.sorting import nargsort
-from pandas.core.strings.object_array import ObjectStringArrayMixin
+from python.core.strings.object_array import ObjectStringArrayMixin
 
 from pandas.io.formats import console
 

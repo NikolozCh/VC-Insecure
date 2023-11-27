@@ -649,7 +649,7 @@ def test_groupby_agg_err_catching(err_cls):
     #  in _python_agg_general
 
     # Use a non-standard EA to make sure we don't go down ndarray paths
-    from pandas.tests.extension.decimal.array import (
+    from python.tests.extension.decimal.array import (
         DecimalArray,
         make_data,
         to_decimal,

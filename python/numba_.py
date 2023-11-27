@@ -11,7 +11,7 @@ import numpy as np
 
 from pandas.compat._optional import import_optional_dependency
 
-from pandas.core.util.numba_ import jit_user_function
+from python.core.util.numba_ import jit_user_function
 
 if TYPE_CHECKING:
     from pandas._typing import Scalar

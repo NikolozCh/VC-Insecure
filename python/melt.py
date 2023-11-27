@@ -15,7 +15,7 @@ import pandas.core.algorithms as algos
 from pandas.core.indexes.api import MultiIndex
 from pandas.core.reshape.concat import concat
 from pandas.core.reshape.util import tile_compat
-from pandas.core.shared_docs import _shared_docs
+from python.core.shared_docs import _shared_docs
 from pandas.core.tools.numeric import to_numeric
 
 if TYPE_CHECKING:

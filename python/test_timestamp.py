@@ -24,7 +24,7 @@ import pytz
 from pytz import utc
 
 from pandas._libs.tslibs.dtypes import NpyDatetimeUnit
-from pandas._libs.tslibs.timezones import (
+from python._libs.tslibs.timezones import (
     dateutil_gettz as gettz,
     get_timezone,
     maybe_get_tz,

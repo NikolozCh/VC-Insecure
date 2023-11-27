@@ -22,8 +22,8 @@ from pandas import (
     Timestamp,
 )
 import pandas._testing as tm
-from pandas._testing._hypothesis import INT_NEG_999_TO_POS_999
-from pandas.tests.tseries.offsets.common import assert_offset_equal
+from python._testing._hypothesis import INT_NEG_999_TO_POS_999
+from python.tests.tseries.offsets.common import assert_offset_equal
 
 from pandas.tseries import offsets
 from pandas.tseries.offsets import (

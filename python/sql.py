@@ -2207,11 +2207,11 @@ class ADBCDatabase(PandasSQL):
         if dtype_backend == "pyarrow":
             mapping = ArrowDtype
         elif dtype_backend == "numpy_nullable":
-            from pandas.io._util import _arrow_dtype_mapping
+            from python.io._util import _arrow_dtype_mapping
 
             mapping = _arrow_dtype_mapping().get
         elif using_pyarrow_string_dtype():
-            from pandas.io._util import arrow_string_types_mapper
+            from python.io._util import arrow_string_types_mapper
 
             arrow_string_types_mapper()
         else:
@@ -2291,7 +2291,7 @@ class ADBCDatabase(PandasSQL):
         if dtype_backend == "pyarrow":
             mapping = ArrowDtype
         elif dtype_backend == "numpy_nullable":
-            from pandas.io._util import _arrow_dtype_mapping
+            from python.io._util import _arrow_dtype_mapping
 
             mapping = _arrow_dtype_mapping().get
         else:

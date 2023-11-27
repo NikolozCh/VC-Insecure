@@ -13,7 +13,7 @@ from pandas.io.excel import (
     ExcelWriter,
     _OpenpyxlWriter,
 )
-from pandas.io.excel._openpyxl import OpenpyxlReader
+from python.io.excel._openpyxl import OpenpyxlReader
 
 openpyxl = pytest.importorskip("openpyxl")
 

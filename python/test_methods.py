@@ -16,7 +16,7 @@ from pandas import (
     period_range,
 )
 import pandas._testing as tm
-from pandas.tests.copy_view.util import get_array
+from python.tests.copy_view.util import get_array
 
 
 def test_copy(using_copy_on_write):

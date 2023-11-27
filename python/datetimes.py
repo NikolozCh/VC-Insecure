@@ -44,7 +44,7 @@ from pandas.core.indexes.base import (
 )
 from pandas.core.indexes.datetimelike import DatetimeTimedeltaMixin
 from pandas.core.indexes.extension import inherit_names
-from pandas.core.tools.times import to_time
+from python.core.tools.times import to_time
 
 if TYPE_CHECKING:
     from collections.abc import Hashable

@@ -11,7 +11,7 @@ from pandas import (
     to_datetime,
 )
 import pandas._testing as tm
-from pandas.tests.plotting.common import (
+from python.tests.plotting.common import (
     _check_ax_scales,
     _check_axes_shape,
     _check_colors,

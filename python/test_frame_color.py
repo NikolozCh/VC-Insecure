@@ -7,7 +7,7 @@ import pytest
 import pandas as pd
 from pandas import DataFrame
 import pandas._testing as tm
-from pandas.tests.plotting.common import (
+from python.tests.plotting.common import (
     _check_colors,
     _check_plot_works,
     _unpack_cycler,

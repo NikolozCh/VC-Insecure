@@ -32,7 +32,7 @@ from pandas.core.arrays import (
     ArrowStringArray,
     StringArray,
 )
-from pandas.core.arrays.string_arrow import ArrowStringArrayNumpySemantics
+from python.core.arrays.string_arrow import ArrowStringArrayNumpySemantics
 
 from pandas.io.common import get_handle
 from pandas.io.xml import read_xml

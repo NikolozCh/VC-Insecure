@@ -12,7 +12,7 @@ from pandas.core.arrays.string_ import (
     StringArray,
     StringDtype,
 )
-from pandas.core.arrays.string_arrow import (
+from python.core.arrays.string_arrow import (
     ArrowStringArray,
     ArrowStringArrayNumpySemantics,
 )

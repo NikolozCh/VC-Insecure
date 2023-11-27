@@ -16,14 +16,14 @@ from pandas.core.dtypes.dtypes import (
 
 import pandas as pd
 from pandas.api.types import is_string_dtype
-from pandas.core.interchange.buffer import PandasBuffer
+from python.core.interchange.buffer import PandasBuffer
 from pandas.core.interchange.dataframe_protocol import (
     Column,
     ColumnBuffers,
     ColumnNullType,
     DtypeKind,
 )
-from pandas.core.interchange.utils import (
+from python.core.interchange.utils import (
     ArrowCTypes,
     Endianness,
     dtype_to_arrow_c_fmt,

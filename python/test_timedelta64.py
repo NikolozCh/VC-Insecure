@@ -28,7 +28,7 @@ from pandas import (
 )
 import pandas._testing as tm
 from pandas.core.arrays import NumpyExtensionArray
-from pandas.tests.arithmetic.common import (
+from python.tests.arithmetic.common import (
     assert_invalid_addsub_type,
     assert_invalid_comparison,
     get_upcast_box,

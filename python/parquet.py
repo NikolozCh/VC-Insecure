@@ -27,9 +27,9 @@ from pandas import (
     DataFrame,
     get_option,
 )
-from pandas.core.shared_docs import _shared_docs
+from python.core.shared_docs import _shared_docs
 
-from pandas.io._util import arrow_string_types_mapper
+from python.io._util import arrow_string_types_mapper
 from pandas.io.common import (
     IOHandles,
     get_handle,
@@ -166,7 +166,7 @@ class PyArrowImpl(BaseImpl):
         import pyarrow.parquet
 
         # import utils to register the pyarrow extension types
-        import pandas.core.arrays.arrow.extension_types  # pyright: ignore[reportUnusedImport] # noqa: F401
+        import python.core.arrays.arrow.extension_types  # pyright: ignore[reportUnusedImport] # noqa: F401
 
         self.api = pyarrow
 
@@ -250,7 +250,7 @@ class PyArrowImpl(BaseImpl):
 
         to_pandas_kwargs = {}
         if dtype_backend == "numpy_nullable":
-            from pandas.io._util import _arrow_dtype_mapping
+            from python.io._util import _arrow_dtype_mapping
 
             mapping = _arrow_dtype_mapping()
             to_pandas_kwargs["types_mapper"] = mapping.get

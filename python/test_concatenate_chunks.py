@@ -6,7 +6,7 @@ from pandas.errors import DtypeWarning
 import pandas._testing as tm
 from pandas.core.arrays import ArrowExtensionArray
 
-from pandas.io.parsers.c_parser_wrapper import _concatenate_chunks
+from python.io.parsers.c_parser_wrapper import _concatenate_chunks
 
 
 def test_concatenate_chunks_pyarrow():

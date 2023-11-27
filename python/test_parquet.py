@@ -12,7 +12,7 @@ from pandas._config import using_copy_on_write
 from pandas._config.config import _get_option
 
 from pandas.compat import is_platform_windows
-from pandas.compat.pyarrow import (
+from python.compat.pyarrow import (
     pa_version_under11p0,
     pa_version_under13p0,
     pa_version_under15p0,

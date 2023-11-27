@@ -24,7 +24,7 @@ from .pandas_vb_common import lib
 try:
     from pandas.util import cache_readonly
 except ImportError:
-    from pandas.util.decorators import cache_readonly
+    from python.util.decorators import cache_readonly
 
 
 # TODO: share with something in pd._testing?

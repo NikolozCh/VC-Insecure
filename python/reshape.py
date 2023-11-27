@@ -9,7 +9,7 @@ import warnings
 
 import numpy as np
 
-import pandas._libs.reshape as libreshape
+import python._libs.reshape as libreshape
 from pandas.errors import PerformanceWarning
 from pandas.util._decorators import cache_readonly
 from pandas.util._exceptions import find_stack_level

@@ -7,7 +7,7 @@ from hypothesis import (
 import numpy as np
 import pytest
 
-from pandas._libs.byteswap import (
+from python._libs.byteswap import (
     read_double_with_byteswap,
     read_float_with_byteswap,
     read_uint16_with_byteswap,

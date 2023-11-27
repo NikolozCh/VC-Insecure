@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from pandas._libs.parsers import (
+from python._libs.parsers import (
     _maybe_upcast,
     na_values,
 )

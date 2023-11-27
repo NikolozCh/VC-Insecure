@@ -12,7 +12,7 @@ try:
     from pandas.api.types import union_categoricals
 except ImportError:
     try:
-        from pandas.types.concat import union_categoricals
+        from python.types.concat import union_categoricals
     except ImportError:
         pass
 

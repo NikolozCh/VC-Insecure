@@ -9,7 +9,7 @@ import pytest
 
 from pandas._libs.tslibs import ccalendar
 
-from pandas._testing._hypothesis import DATETIME_IN_PD_TIMESTAMP_RANGE_NO_TZ
+from python._testing._hypothesis import DATETIME_IN_PD_TIMESTAMP_RANGE_NO_TZ
 
 
 @pytest.mark.parametrize(

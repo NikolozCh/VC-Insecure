@@ -11,7 +11,7 @@ import numpy as np
 import pytest
 
 from pandas import Timestamp
-from pandas.tests.tseries.offsets.common import (
+from python.tests.tseries.offsets.common import (
     assert_is_on_offset,
     assert_offset_equal,
 )

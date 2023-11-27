@@ -6,7 +6,7 @@ from datetime import timedelta
 import numpy as np
 
 from pandas._libs.tslibs import BaseOffset
-from pandas._libs.window.indexers import calculate_variable_window_bounds
+from python._libs.window.indexers import calculate_variable_window_bounds
 from pandas.util._decorators import Appender
 
 from pandas.core.dtypes.common import ensure_platform_int

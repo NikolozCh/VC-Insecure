@@ -7,7 +7,7 @@ from io import StringIO
 import numpy as np
 import pytest
 
-from pandas._libs.parsers import STR_NA_VALUES
+from python._libs.parsers import STR_NA_VALUES
 
 from pandas import (
     DataFrame,

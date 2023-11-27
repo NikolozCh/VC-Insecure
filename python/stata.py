@@ -34,7 +34,7 @@ import numpy as np
 
 from pandas._libs import lib
 from pandas._libs.lib import infer_dtype
-from pandas._libs.writers import max_len_string_array
+from python._libs.writers import max_len_string_array
 from pandas.errors import (
     CategoricalConversionWarning,
     InvalidColumnName,
@@ -68,7 +68,7 @@ from pandas.core.frame import DataFrame
 from pandas.core.indexes.base import Index
 from pandas.core.indexes.range import RangeIndex
 from pandas.core.series import Series
-from pandas.core.shared_docs import _shared_docs
+from python.core.shared_docs import _shared_docs
 
 from pandas.io.common import get_handle
 

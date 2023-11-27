@@ -13,8 +13,8 @@ from typing import TYPE_CHECKING
 import numba
 import numpy as np
 
-from pandas.core._numba.kernels.shared import is_monotonic_increasing
-from pandas.core._numba.kernels.sum_ import grouped_kahan_sum
+from python.core._numba.kernels.shared import is_monotonic_increasing
+from python.core._numba.kernels.sum_ import grouped_kahan_sum
 
 if TYPE_CHECKING:
     from pandas._typing import npt

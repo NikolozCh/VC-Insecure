@@ -14,7 +14,7 @@ from pandas._libs.tslibs import (
 )
 from pandas.compat.numpy import function as nv
 
-from pandas.core.dtypes.astype import astype_array
+from python.core.dtypes.astype import astype_array
 from pandas.core.dtypes.cast import construct_1d_object_array_from_listlike
 from pandas.core.dtypes.common import pandas_dtype
 from pandas.core.dtypes.dtypes import NumpyEADtype
@@ -27,9 +27,9 @@ from pandas.core import (
     ops,
 )
 from pandas.core.arraylike import OpsMixin
-from pandas.core.arrays._mixins import NDArrayBackedExtensionArray
+from python.core.arrays._mixins import NDArrayBackedExtensionArray
 from pandas.core.construction import ensure_wrapped_if_datetimelike
-from pandas.core.strings.object_array import ObjectStringArrayMixin
+from python.core.strings.object_array import ObjectStringArrayMixin
 
 if TYPE_CHECKING:
     from pandas._typing import (

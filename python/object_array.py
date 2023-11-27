@@ -15,11 +15,11 @@ import numpy as np
 
 from pandas._libs import lib
 import pandas._libs.missing as libmissing
-import pandas._libs.ops as libops
+import python._libs.ops as libops
 
 from pandas.core.dtypes.missing import isna
 
-from pandas.core.strings.base import BaseStringArrayMethods
+from python.core.strings.base import BaseStringArrayMethods
 
 if TYPE_CHECKING:
     from collections.abc import Sequence

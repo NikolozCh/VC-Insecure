@@ -38,7 +38,7 @@ from pandas import (
 )
 import pandas._testing as tm
 from pandas.core.arrays.datetimes import _generate_range as generate_range
-from pandas.tests.indexes.datetimes.test_timezones import (
+from python.tests.indexes.datetimes.test_timezones import (
     FixedOffset,
     fixed_off_no_name,
 )
@@ -105,7 +105,7 @@ class TestTimestampEquivDateRange:
 
     @td.skip_if_windows
     def test_date_range_timestamp_equiv_explicit_dateutil(self):
-        from pandas._libs.tslibs.timezones import dateutil_gettz as gettz
+        from python._libs.tslibs.timezones import dateutil_gettz as gettz
 
         rng = date_range("20090415", "20090519", tz=gettz("US/Eastern"))
         stamp = rng[0]
@@ -560,7 +560,7 @@ class TestDateRanges:
         # see gh-2906
 
         # Use maybe_get_tz to fix filename in tz under dateutil.
-        from pandas._libs.tslibs.timezones import maybe_get_tz
+        from python._libs.tslibs.timezones import maybe_get_tz
 
         tz = lambda x: maybe_get_tz("dateutil/" + x)
 

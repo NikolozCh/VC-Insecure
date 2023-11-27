@@ -9,7 +9,7 @@ from pandas import (
     errors,
     read_hdf,
 )
-from pandas.tests.io.pytables.common import (
+from python.tests.io.pytables.common import (
     _maybe_remove,
     ensure_clean_store,
 )

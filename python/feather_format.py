@@ -15,9 +15,9 @@ from pandas.util._validators import check_dtype_backend
 
 import pandas as pd
 from pandas.core.api import DataFrame
-from pandas.core.shared_docs import _shared_docs
+from python.core.shared_docs import _shared_docs
 
-from pandas.io._util import arrow_string_types_mapper
+from python.io._util import arrow_string_types_mapper
 from pandas.io.common import get_handle
 
 if TYPE_CHECKING:
@@ -118,7 +118,7 @@ def read_feather(
     from pyarrow import feather
 
     # import utils to register the pyarrow extension types
-    import pandas.core.arrays.arrow.extension_types  # pyright: ignore[reportUnusedImport] # noqa: F401
+    import python.core.arrays.arrow.extension_types  # pyright: ignore[reportUnusedImport] # noqa: F401
 
     check_dtype_backend(dtype_backend)
 
@@ -135,7 +135,7 @@ def read_feather(
         )
 
         if dtype_backend == "numpy_nullable":
-            from pandas.io._util import _arrow_dtype_mapping
+            from python.io._util import _arrow_dtype_mapping
 
             return pa_table.to_pandas(types_mapper=_arrow_dtype_mapping().get)
 

@@ -10,7 +10,7 @@ from datetime import datetime
 import pytest
 
 import pandas as pd
-from pandas.tests.tseries.offsets.common import (
+from python.tests.tseries.offsets.common import (
     assert_is_on_offset,
     assert_offset_equal,
 )

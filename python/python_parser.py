@@ -44,7 +44,7 @@ from pandas.io.common import (
     dedup_names,
     is_potential_multi_index,
 )
-from pandas.io.parsers.base_parser import (
+from python.io.parsers.base_parser import (
     ParserBase,
     parser_defaults,
 )

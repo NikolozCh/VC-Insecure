@@ -15,7 +15,7 @@ from pandas import (
     date_range,
 )
 import pandas._testing as tm
-from pandas.tests.plotting.common import (
+from python.tests.plotting.common import (
     _check_axes_shape,
     _check_box_return_type,
     _check_legend_labels,

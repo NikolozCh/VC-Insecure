@@ -24,7 +24,7 @@ if TYPE_CHECKING:
     )
 
     from pandas.core.arrays import IntervalArray
-    from pandas.core.arrays._mixins import NDArrayBackedExtensionArray
+    from python.core.arrays._mixins import NDArrayBackedExtensionArray
 
 _ExtensionIndexT = TypeVar("_ExtensionIndexT", bound="ExtensionIndex")
 

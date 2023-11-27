@@ -30,7 +30,7 @@ from pandas import (
     Timestamp,
 )
 import pandas._testing as tm
-from pandas._testing._hypothesis import DATETIME_NO_TZ
+from python._testing._hypothesis import DATETIME_NO_TZ
 from pandas.core.indexes.datetimes import date_range
 from pandas.core.tools.datetimes import start_caching_at
 

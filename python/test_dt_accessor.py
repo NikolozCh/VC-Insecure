@@ -11,7 +11,7 @@ import numpy as np
 import pytest
 import pytz
 
-from pandas._libs.tslibs.timezones import maybe_get_tz
+from python._libs.tslibs.timezones import maybe_get_tz
 from pandas.errors import SettingWithCopyError
 
 from pandas.core.dtypes.common import (

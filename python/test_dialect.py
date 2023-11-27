@@ -115,7 +115,7 @@ def test_dialect_conflict_except_delimiter(all_parsers, custom_dialect, arg, val
         if value == "dialect":  # No conflict --> no warning.
             kwds[arg] = dialect_kwargs[arg]
         elif value == "default":  # Default --> no warning.
-            from pandas.io.parsers.base_parser import parser_defaults
+            from python.io.parsers.base_parser import parser_defaults
 
             kwds[arg] = parser_defaults[arg]
         else:  # Non-default + conflict with dialect --> warning.

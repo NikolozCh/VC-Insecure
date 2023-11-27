@@ -24,7 +24,7 @@ import warnings
 import numpy as np
 
 from pandas._libs import lib
-from pandas._libs.parsers import STR_NA_VALUES
+from python._libs.parsers import STR_NA_VALUES
 from pandas.errors import (
     AbstractMethodError,
     ParserWarning,
@@ -42,7 +42,7 @@ from pandas.core.dtypes.common import (
 
 from pandas.core.frame import DataFrame
 from pandas.core.indexes.api import RangeIndex
-from pandas.core.shared_docs import _shared_docs
+from python.core.shared_docs import _shared_docs
 
 from pandas.io.common import (
     IOHandles,
@@ -50,14 +50,14 @@ from pandas.io.common import (
     stringify_path,
     validate_header_arg,
 )
-from pandas.io.parsers.arrow_parser_wrapper import ArrowParserWrapper
-from pandas.io.parsers.base_parser import (
+from python.io.parsers.arrow_parser_wrapper import ArrowParserWrapper
+from python.io.parsers.base_parser import (
     ParserBase,
     is_index_col,
     parser_defaults,
 )
-from pandas.io.parsers.c_parser_wrapper import CParserWrapper
-from pandas.io.parsers.python_parser import (
+from python.io.parsers.c_parser_wrapper import CParserWrapper
+from python.io.parsers.python_parser import (
     FixedWidthFieldParser,
     PythonParser,
 )

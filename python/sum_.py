@@ -20,7 +20,7 @@ import numpy as np
 if TYPE_CHECKING:
     from pandas._typing import npt
 
-from pandas.core._numba.kernels.shared import is_monotonic_increasing
+from python.core._numba.kernels.shared import is_monotonic_increasing
 
 
 @numba.jit(nopython=True, nogil=True, parallel=False)

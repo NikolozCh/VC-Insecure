@@ -3,7 +3,7 @@
 import pytest
 
 from pandas import DataFrame
-from pandas.tests.plotting.common import _check_visible
+from python.tests.plotting.common import _check_visible
 
 pytest.importorskip("matplotlib")
 

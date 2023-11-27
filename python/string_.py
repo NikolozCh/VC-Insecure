@@ -14,7 +14,7 @@ from pandas._libs import (
     lib,
     missing as libmissing,
 )
-from pandas._libs.arrays import NDArrayBacked
+from python._libs.arrays import NDArrayBacked
 from pandas._libs.lib import ensure_string_array
 from pandas.compat import pa_version_under10p1
 from pandas.compat.numpy import function as nv
@@ -35,7 +35,7 @@ from pandas.core.dtypes.common import (
 )
 
 from pandas.core import ops
-from pandas.core.array_algos import masked_reductions
+from python.core.array_algos import masked_reductions
 from pandas.core.arrays.base import ExtensionArray
 from pandas.core.arrays.floating import (
     FloatingArray,
@@ -193,7 +193,7 @@ class StringDtype(StorageExtensionDtype):
         -------
         type
         """
-        from pandas.core.arrays.string_arrow import (
+        from python.core.arrays.string_arrow import (
             ArrowStringArray,
             ArrowStringArrayNumpySemantics,
         )
@@ -212,11 +212,11 @@ class StringDtype(StorageExtensionDtype):
         Construct StringArray from pyarrow Array/ChunkedArray.
         """
         if self.storage == "pyarrow":
-            from pandas.core.arrays.string_arrow import ArrowStringArray
+            from python.core.arrays.string_arrow import ArrowStringArray
 
             return ArrowStringArray(array)
         elif self.storage == "pyarrow_numpy":
-            from pandas.core.arrays.string_arrow import ArrowStringArrayNumpySemantics
+            from python.core.arrays.string_arrow import ArrowStringArrayNumpySemantics
 
             return ArrowStringArrayNumpySemantics(array)
         else:

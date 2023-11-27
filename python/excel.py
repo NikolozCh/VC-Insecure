@@ -39,9 +39,9 @@ from pandas import (
     PeriodIndex,
 )
 import pandas.core.common as com
-from pandas.core.shared_docs import _shared_docs
+from python.core.shared_docs import _shared_docs
 
-from pandas.io.formats._color_data import CSS4_COLORS
+from python.io.formats._color_data import CSS4_COLORS
 from pandas.io.formats.css import (
     CSSResolver,
     CSSWarning,

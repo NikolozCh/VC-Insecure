@@ -33,7 +33,7 @@ from pandas import isna
 from pandas.core.indexes.base import Index
 from pandas.core.indexes.multi import MultiIndex
 from pandas.core.series import Series
-from pandas.core.shared_docs import _shared_docs
+from python.core.shared_docs import _shared_docs
 
 from pandas.io.common import (
     file_exists,

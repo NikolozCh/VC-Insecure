@@ -20,7 +20,7 @@ from pandas import (
 try:
     from pandas.plotting import andrews_curves
 except ImportError:
-    from pandas.tools.plotting import andrews_curves
+    from python.tools.plotting import andrews_curves
 
 from pandas.plotting._core import _get_plot_backend
 

@@ -12,7 +12,7 @@ from pandas import (
     Series,
     _testing as tm,
 )
-from pandas.tests.strings import (
+from python.tests.strings import (
     _convert_na_value,
     object_pyarrow_numpy,
 )

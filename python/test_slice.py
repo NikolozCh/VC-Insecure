@@ -17,7 +17,7 @@ from pandas import (
     Timestamp,
 )
 import pandas._testing as tm
-from pandas.tests.indexing.common import _mklbl
+from python.tests.indexing.common import _mklbl
 
 
 class TestMultiIndexSlicers:

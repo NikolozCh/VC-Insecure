@@ -959,7 +959,7 @@ class DataFrameRenderer:
         line_width : int, optional
             Width to wrap a line in characters.
         """
-        from pandas.io.formats.string import StringFormatter
+        from python.io.formats.string import StringFormatter
 
         string_formatter = StringFormatter(self.fmt, line_width=line_width)
         string = string_formatter.to_string()

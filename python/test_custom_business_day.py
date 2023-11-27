@@ -15,7 +15,7 @@ from pandas import (
     _testing as tm,
     read_pickle,
 )
-from pandas.tests.tseries.offsets.common import assert_offset_equal
+from python.tests.tseries.offsets.common import assert_offset_equal
 
 from pandas.tseries.holiday import USFederalHolidayCalendar
 

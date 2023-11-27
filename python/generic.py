@@ -84,7 +84,7 @@ from pandas.core.indexes.api import (
     default_index,
 )
 from pandas.core.series import Series
-from pandas.core.util.numba_ import maybe_use_numba
+from python.core.util.numba_ import maybe_use_numba
 
 from pandas.plotting import boxplot_frame_groupby
 

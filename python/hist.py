@@ -27,7 +27,7 @@ from pandas.plotting._matplotlib.core import (
     LinePlot,
     MPLPlot,
 )
-from pandas.plotting._matplotlib.groupby import (
+from python.plotting._matplotlib.groupby import (
     create_iter_data_given_by,
     reformat_hist_y_given_by,
 )

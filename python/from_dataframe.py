@@ -17,7 +17,7 @@ from pandas.core.interchange.dataframe_protocol import (
     DataFrame as DataFrameXchg,
     DtypeKind,
 )
-from pandas.core.interchange.utils import (
+from python.core.interchange.utils import (
     ArrowCTypes,
     Endianness,
 )

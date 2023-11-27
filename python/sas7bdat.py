@@ -28,14 +28,14 @@ from typing import (
 
 import numpy as np
 
-from pandas._libs.byteswap import (
+from python._libs.byteswap import (
     read_double_with_byteswap,
     read_float_with_byteswap,
     read_uint16_with_byteswap,
     read_uint32_with_byteswap,
     read_uint64_with_byteswap,
 )
-from pandas._libs.sas import (
+from python._libs.sas import (
     Parser,
     get_subheader_index,
 )

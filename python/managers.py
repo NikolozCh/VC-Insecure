@@ -25,7 +25,7 @@ from pandas._libs import (
     internals as libinternals,
     lib,
 )
-from pandas._libs.internals import (
+from python._libs.internals import (
     BlockPlacement,
     BlockValuesRefs,
 )
@@ -55,7 +55,7 @@ from pandas.core.dtypes.missing import (
 
 import pandas.core.algorithms as algos
 from pandas.core.arrays import DatetimeArray
-from pandas.core.arrays._mixins import NDArrayBackedExtensionArray
+from python.core.arrays._mixins import NDArrayBackedExtensionArray
 from pandas.core.construction import (
     ensure_wrapped_if_datetimelike,
     extract_array,
@@ -65,7 +65,7 @@ from pandas.core.indexes.api import (
     Index,
     ensure_index,
 )
-from pandas.core.internals.base import (
+from python.core.internals.base import (
     DataManager,
     SingleDataManager,
     ensure_np_dtype,
@@ -81,7 +81,7 @@ from pandas.core.internals.blocks import (
     new_block,
     new_block_2d,
 )
-from pandas.core.internals.ops import (
+from python.core.internals.ops import (
     blockwise_all,
     operate_blockwise,
 )
