@@ -17,8 +17,9 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    withSonarQubeEnv(installationName: 'SonarLocal', credentialsId: '98d4e60b-3f32-480c-aecb-0de3247b7289') {
-                        sh 'mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
+                    def scannerHome = tool 'SonarScanner';
+                    withSonarQubeEnv() {
+                        sh "${scannerHome}/bin/sonar-scanner"
                     }
                 }
             }
