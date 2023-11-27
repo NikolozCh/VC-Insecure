@@ -14,6 +14,12 @@ pipeline {
                 }
             }
         }
+        stage('SonarQube Analysis') {
+            def scannerHome = tool 'SonarLocal';
+            withSonarQubeEnv() {
+                sh "${scannerHome}/bin/sonar-scanner"
+            }
+        }
     }
 
     post {
