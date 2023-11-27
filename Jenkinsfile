@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     withSonarQubeEnv(installationName: 'SonarLocal', credentialsId: '98d4e60b-3f32-480c-aecb-0de3247b7289') {
-                        sh './mvnw clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
+                        sh 'mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
                     }
                 }
             }
