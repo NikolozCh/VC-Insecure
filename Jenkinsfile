@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        ZIP_JS_OUTFILE="${WORKSPACE}/javascript.zip" 
+        ZIP_JS_OUTFILE="${WORKSPACE}/vc-javascript.zip" 
         FILES_TO_ZIP="javascript/**.js"
     }
 
