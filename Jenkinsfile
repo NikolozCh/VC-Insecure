@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     environment {
         // PL/SQL
         ZIP_PLSQL_OUTFILE="${WORKSPACE}/vc-pl.zip" 
