@@ -3,7 +3,7 @@ pipeline {
     environment {
         // PL/SQL
         ZIP_PLSQL_OUTFILE="${WORKSPACE}/vc-pl.zip" 
-        FILES_TO_ZIP_PLSQL="pl_sql/not-vuln/**.sql"
+        FILES_TO_ZIP_PLSQL="pl_sql/**.sql"
     }
 
     stages {
