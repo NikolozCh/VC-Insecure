@@ -20,7 +20,7 @@ pipeline {
     post {
         success {
             // JAVA
-            veracode canFailJob: true, scanPollingInterval: 30, scanName: "Jenkins - ${env.BUILD_NUMBER}", applicationName: "Java_HTS", criticality: "Medium", sandboxName: "General-JAVA-APP", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: ZIP_FILE_NAME, scanIncludesPattern: ZIP_FILE_NAME
+            veracode canFailJob: true, scanPollingInterval: 30, scanName: "Jenkins - ${env.BUILD_NUMBER}", applicationName: "PL/SQL Testing NC", criticality: "Medium", sandboxName: "PL/SQL Sandbox", waitForScan: true, timeout: 30, deleteIncompleteScan: false, uploadIncludesPattern: ZIP_FILE_NAME, scanIncludesPattern: ZIP_FILE_NAME
         }
     }
 }
