@@ -4,7 +4,7 @@ pipeline {
         // JAVA
         ZIP_FILE_NAME="vc-java.zip"
         ZIP_PLSQL_OUTFILE="${WORKSPACE}/${ZIP_FILE_NAME}" 
-        FILES_TO_ZIP_PLSQL="java/**/**.java"
+        FILES_TO_ZIP_PLSQL="pl_sql/vuln/**.sql"
     }
 
     stages {
